@@ -4,6 +4,9 @@
 	<meta charset="utf-8" />
 	<title>Профиль</title>
 	<link href="css/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/sort.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 <body>
 	<header>
@@ -30,27 +33,27 @@
 		</div>
 		<div class="main">
 			<div class="table-container">
-			<table id="file-table">
-				<tr>
-					<th>Файл</th>
-					<th>Размер (Kb)</th> 
-					<th>Дата и время</th>
-					<th>Удалить</th>
-				</tr>
-				<tr>
-					<td><a href="#">Этот архив с русским именем.zip</a></td>
-					<td>132.22</td>
-					<td>2014.02.28 18:01:15</td>
-					<td><a href="#" class="delete-link">Удалить</a></td>
-				</tr>
-				<tr>
-					<td><a href="#">_www_app.zip</a></td>
-					<td>132.45</td>
-					<td>2014.02.28 18:24:54</td>
-					<td><a href="#" class="delete-link">Удалить</a></td>
-				</tr>
-			</table>
-		</div>
+				<table id="file-table">
+					<tr>
+						<th>Файл <i onclick="sortByName()" class="fas fa-sort"></i></th>
+						<th>Размер (Kb) <i onclick="sortByWidth()" class="fas fa-sort"></i></th> 
+						<th>Дата и время <i onclick="sortByDateTime()" class="fas fa-sort"></i></th>
+						<th>Удалить</th>
+					</tr>
+					<tr>
+						<td><a href="#">Этот архив с русским именем.zip</a></td>
+						<td id="width">132.22</td>
+						<td>2014.02.28 18:01:15</td>
+						<td><a href="#" class="delete-link">Удалить</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">_www_app.zip</a></td>
+						<td id="width">132.45</td>
+						<td>2014.02.28 18:24:54</td>
+						<td><a href="#" class="delete-link">Удалить</a></td>
+					</tr>
+				</table>
+			</div>
 			<form class="profile-file-form" method="post">
 				<fieldset id="upload-file-fieldset">
 					<div class="form-item">
