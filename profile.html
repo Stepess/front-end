@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Профиль</title>
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+	<header>
+		<img src="resources/images/folder.png" alt="folder">
+		<p> Файловое хранилище v 0.01 (потеряй свои файлы красиво! ;)) </p>
+		<img src="resources/images/folder.png" alt="folder">
+	</header>
+	<nav>
+		<p> Вы вошли в систему как  <b>Иванов Иван Иванович.</b> </p>
+		&nbsp;
+		<a href="#">Выйти.</a>
+	</nav>
+	<section>
+		<div class="side-bar"> 
+			<pre>
+<!-- 		 --><b>Можно загружать:</b>
+<!-- 		 -->ZIP (до 20 Mb);
+<!-- 		 -->DOCX (до 40 Mb);
+<!-- 		 -->PPTX (до 50 Mb);
+
+<!-- 		 --><b>Использовать:</b>
+<!-- 		 -->27.34 Mb из 100.0 Mb
+			</pre>		
+		</div>
+		<div class="main">
+			<table id="file-table">
+				<tr>
+					<th>Файл</th>
+					<th>Размер (Kb)</th> 
+					<th>Дата и время</th>
+					<th>Удалить</th>
+				</tr>
+				<tr>
+					<td><a href="#">Этот архив с русским именем.zip</a></td>
+					<td>132.22</td>
+					<td>2014.02.28 18:01:15</td>
+					<td><a href="#">Удалить</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">_www_app.zip</a></td>
+					<td>132.45</td>
+					<td>2014.02.28 18:24:54</td>
+					<td><a href="#">Удалить</a></td>
+				</tr>
+			</table>
+			<form id="upload-file-form" method="post">
+				<fieldset id="upload-file-fieldset">
+					<div class="form-item">
+						<p>Загрузить новый файл:</p>
+					</div>
+					<div class="form-item">
+						<button>Выбрать</button>
+						<input type="file" id="file">
+					</div>
+					<div class="form-item">
+						<button>Загрузить</button>
+					</div>
+				</fieldset>
+			</form>
+
+			<form id="request-file-form" method="post">
+				<fieldset id="request-file-fieldset">
+					<div class="form-item">
+						<p>Запросить с удалённого сервера:</p>
+					</div>
+					<div class="form-item">
+						<button>Выбрать</button>
+						<input type="text" id="-request-file-name">
+					</div>
+					<div class="form-item">
+						<label for="add-to-storage">Поместить в хранилище:</label>
+						<input type="checkbox" id="add-to-storage">
+					</div>
+					<div class="form-item">
+						<button>Запросить</button>
+					</div>
+				</fieldset>
+			</form>
+
+
+		</div>
+		<div class="side-bar">
+			<pre>
+<!-- 		 --><b>Статистика:</b> 
+<!-- 		 -->Пользователей: 123
+<!-- 		 -->Файлов: 1234 
+<!-- 		 -->Объём: 2345 Мб 
+<!-- 		 -->Объём / польз.: 45 Мб
+			</pre>
+		</div>
+	</section>
+	<footer>
+		<p>@2014.EPAM RD PHP Training</p>
+		
+	</footer>
+</body>
+</html>

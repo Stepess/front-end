@@ -16,14 +16,17 @@ header p {
 }
 
 nav {
+	display: flex;
 	border-bottom: 1px solid grey;
 	border-top: 1px solid grey;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 nav p {
 	font-size: 15px;
-	display: flex;
-	justify-content: flex-end;
+	
+	
 }
 
 section {
@@ -80,7 +83,7 @@ section .side-bar {
 
 section .side-bar pre {
 	color: white;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 footer {
@@ -88,4 +91,13 @@ footer {
 	justify-content: center;
 	padding: 5px 0px;
 	border-top: 1px solid gray;
+}
+
+#file-table {
+	width: 100%;
+}
+
+#file-table tr {
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
 }
