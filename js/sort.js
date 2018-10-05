@@ -4,34 +4,28 @@ window.onload = function() {
 	var datetimeSortFlag = {value:true};
 
 	document.getElementById("sort-by-name").onclick = function() {
-		sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0),
+		sortFiles((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0),
 			(a,b) => (a.name < b.name) ? 1 : ((b.name < a.name) ? -1 : 0), 
 			nameSortFlag);
 	};
 
 	document.getElementById("sort-by-width").onclick = function() {
-		sort(function(a,b) { return a.width-b.width},
+		sortFiles(function(a,b) { return a.width-b.width},
 			function(a,b) { return b.width-a.width},
 			widthSortFlag);
 	};
 
 	document.getElementById("sort-by-datetime").onclick = function() {
-		sort((a,b) => (a.datetime > b.datetime) ? 1 : ((b.datetime > a.datetime) ? -1 : 0),
+		sortFiles((a,b) => (a.datetime > b.datetime) ? 1 : ((b.datetime > a.datetime) ? -1 : 0),
 			(a,b) => (a.datetime < b.datetime) ? 1 : ((b.datetime < a.datetime) ? -1 : 0),
 			datetimeSortFlag);
 	};
 
-	function sort(sortFunctionAsc, sortFunctionDesc, flag) {
+	function sortFiles(sortFunctionAsc, sortFunctionDesc, flag) {
 		var table = document.getElementById("file-table")
 		var files = extractFilesFromTable(table)
-		console.log(flag);
-		if (flag.value) {
-			flag.value = false;
-			files.sort(sortFunctionAsc)
-		} else {
-			flag.value = true;
-			files.sort(sortFunctionDesc)
-		}
+		files.sort(flag.value ? sortFunctionAsc : sortFunctionDesc);
+		flag.value = !flag.value;
 		writeFilesInTable(table, files);
 	}
 
