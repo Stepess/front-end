@@ -1,6 +1,18 @@
+window.onload = function() {
 var widthSortFlag = true;
 var nameSortFlag = true;
 var datetimeSortFlag = true;
+document.getElementById("sort-by-name").onclick = function() {
+	sortByName();
+};
+
+document.getElementById("sort-by-width").onclick = function() {
+	sortByWidth();
+};
+
+document.getElementById("sort-by-datetime").onclick = function() {
+	sortByDateTime();
+};
 
 function sortByWidth() {
 	var table = document.getElementById("file-table")
@@ -87,9 +99,10 @@ function formatDateTime(d) {
 		seconds = "0" + seconds;
 	}
 	return [d.getFullYear(),
-			month,
-            date].join('.') + ' ' +
-            [hours,
-            minutes,
-            seconds].join(':');
+	month,
+	date].join('.') + ' ' +
+	[hours,
+	minutes,
+	seconds].join(':');
+}
 }
