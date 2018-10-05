@@ -40,31 +40,30 @@
 					<td><a href="#">Этот архив с русским именем.zip</a></td>
 					<td>132.22</td>
 					<td>2014.02.28 18:01:15</td>
-					<td><a href="#">Удалить</a></td>
+					<td><a href="#" class="delete-link">Удалить</a></td>
 				</tr>
 				<tr>
 					<td><a href="#">_www_app.zip</a></td>
 					<td>132.45</td>
 					<td>2014.02.28 18:24:54</td>
-					<td><a href="#">Удалить</a></td>
+					<td><a href="#" class="delete-link">Удалить</a></td>
 				</tr>
 			</table>
-			<form id="upload-file-form" method="post">
+			<form class="profile-file-form" method="post">
 				<fieldset id="upload-file-fieldset">
 					<div class="form-item">
 						<p>Загрузить новый файл:</p>
 					</div>
 					<div class="form-item">
 						<button>Выбрать</button>
-						<input type="file" id="file">
+						<input type="text" id="file">
 					</div>
 					<div class="form-item">
 						<button>Загрузить</button>
 					</div>
 				</fieldset>
 			</form>
-
-			<form id="request-file-form" method="post">
+			<form class="profile-file-form" method="post">
 				<fieldset id="request-file-fieldset">
 					<div class="form-item">
 						<p>Запросить с удалённого сервера:</p>
@@ -82,8 +81,6 @@
 					</div>
 				</fieldset>
 			</form>
-
-
 		</div>
 		<div class="side-bar">
 			<pre>
@@ -97,7 +94,6 @@
 	</section>
 	<footer>
 		<p>@2014.EPAM RD PHP Training</p>
-		
 	</footer>
 </body>
 </html>

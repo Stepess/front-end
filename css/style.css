@@ -25,8 +25,11 @@ nav {
 
 nav p {
 	font-size: 15px;
-	
-	
+}
+
+p {
+	margin: 0;
+    padding: 0;
 }
 
 section {
@@ -45,11 +48,11 @@ section {
 	border-right: 1px solid gray;
 }
 
-#login-form {
+.main form {
 	padding: 5px 5px;
 }
 
-#login-fieldset {
+.main fieldset {
     border: 1px solid gray;
 }
 
@@ -61,13 +64,20 @@ section {
   text-align:right;
 } 
 
-#login-fieldset input {
+.main input {
 	width: auto;
+}
 
+.main .profile-file-form input[type="text"] {
+	width: 85%;
 }
 
 #login-fieldset button {
 	margin-left: 10%;
+}
+
+.main fieldset button {
+	width: 10%;
 }
 
 .form-item{
@@ -97,7 +107,15 @@ footer {
 	width: 100%;
 }
 
-#file-table tr {
+#file-table th {
 	border-top: 1px solid gray;
+}
+
+#file-table th,td {
+	text-align: center;
 	border-bottom: 1px solid gray;
+}
+
+.delete-link {
+	color: red;
 }
